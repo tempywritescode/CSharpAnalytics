@@ -160,7 +160,7 @@ namespace CSharpAnalytics.PCL
         /// <summary>
         /// Internal status of this visitor.
         /// </summary>
-        internal VisitorStatus VisitorStatus
+        public VisitorStatus VisitorStatus
         {
             get
             {

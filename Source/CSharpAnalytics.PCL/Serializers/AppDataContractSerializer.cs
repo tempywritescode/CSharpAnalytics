@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 namespace CSharpAnalytics.PCL.Serializers
 {
     /// <summary>
-    /// Provides an easy way to serialize and deserialize simple classes to a user AppData folder in
-    /// Windows Forms applications.
+    /// Provides an easy way to serialize and deserialize simple classes to a user AppData folder.
     /// </summary>
-    internal static class AppDataContractSerializer
+    public static class AppDataContractSerializer
     {
         /// <summary>
         /// Restore an object from local folder storage.
