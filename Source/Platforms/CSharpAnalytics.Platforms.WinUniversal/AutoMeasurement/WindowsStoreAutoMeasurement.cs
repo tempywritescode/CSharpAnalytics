@@ -9,7 +9,7 @@ using CSharpAnalytics.PCL.Network;
 using CSharpAnalytics.PCL.Protocols.Measurement;
 using CSharpAnalytics.PCL.Serializers;
 using CSharpAnalytics.PCL.Sessions;
-using CSharpAnalytics.SystemInfo;
+using CSharpAnalytics.Platforms.WinUniversal.SystemInfo;
 using System;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
@@ -20,7 +20,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace CSharpAnalytics
+namespace CSharpAnalytics.Platforms.WinUniversal
 {
     /// <summary>
     /// Helper class to get up and running with CSharpAnalytics in WindowsStore applications.
