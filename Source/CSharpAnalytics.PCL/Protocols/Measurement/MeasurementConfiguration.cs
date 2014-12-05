@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace CSharpAnalytics
+namespace CSharpAnalytics.PCL
 {
     /// <summary>
     /// Configuration settings for analytics.

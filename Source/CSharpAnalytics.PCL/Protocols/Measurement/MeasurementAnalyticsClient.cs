@@ -2,16 +2,16 @@
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. 
 // You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-using CSharpAnalytics.Activities;
-using CSharpAnalytics.Environment;
-using CSharpAnalytics.Sessions;
+using CSharpAnalytics.PCL.Activities;
+using CSharpAnalytics.PCL.Environment;
+using CSharpAnalytics.PCL.Sessions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 
-namespace CSharpAnalytics.Protocols.Measurement
+namespace CSharpAnalytics.PCL.Protocols.Measurement
 {
     /// <summary>
     /// MeasurementAnalyticsClient should exist for the scope of your application and is the primary entry point for tracking via Measurement Protocol.

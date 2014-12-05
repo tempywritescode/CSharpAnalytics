@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSharpAnalytics.Sessions
+namespace CSharpAnalytics.PCL.Sessions
 {
     public class TimeoutSessionManager : SessionManager
     {

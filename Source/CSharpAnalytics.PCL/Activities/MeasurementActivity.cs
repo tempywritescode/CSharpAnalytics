@@ -5,7 +5,7 @@
 using System;
 using System.Globalization;
 
-namespace CSharpAnalytics.Activities
+namespace CSharpAnalytics.PCL.Activities
 {
     public abstract class MeasurementActivity
     {

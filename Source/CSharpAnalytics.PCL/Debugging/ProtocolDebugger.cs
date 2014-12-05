@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace CSharpAnalytics.Debugging
+namespace CSharpAnalytics.PCL.Debugging
 {
     /// <summary>
     /// Provide debugging of tracking requests by decomposing such request back into their parts.

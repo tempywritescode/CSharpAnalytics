@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CSharpAnalytics.Activities
+namespace CSharpAnalytics.PCL.Activities
 {
     /// <summary>
     /// Captures the details of an order and the items within it.

@@ -3,10 +3,10 @@
 // You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
 using System;
-using CSharpAnalytics.Protocols.Measurement;
-using CSharpAnalytics.Sessions;
+using CSharpAnalytics.PCL.Protocols.Measurement;
+using CSharpAnalytics.PCL.Sessions;
 
-namespace CSharpAnalytics
+namespace CSharpAnalytics.PCL
 {
     /// <summary>
     ///     AutoMeasurement static wrapper to make it easier to use across a WinForms application.

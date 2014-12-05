@@ -4,7 +4,7 @@
 
  using System;
 
-namespace CSharpAnalytics.Network
+namespace CSharpAnalytics.PCL.Network
 {
     public static class ExtensionMethods
     {

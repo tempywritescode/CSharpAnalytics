@@ -4,7 +4,7 @@
 
 using System.Diagnostics;
 
-namespace CSharpAnalytics.Activities
+namespace CSharpAnalytics.PCL.Activities
 {
     /// <summary>
     /// Captures the details of a screen displayed within an application.

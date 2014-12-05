@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
-namespace CSharpAnalytics.Serializers
+namespace CSharpAnalytics.PCL.Serializers
 {
     /// <summary>
     /// Provides an easy way to serialize and deserialize simple classes to a user AppData folder in

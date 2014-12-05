@@ -4,7 +4,7 @@
 
 using System;
 
-namespace CSharpAnalytics.Sessions
+namespace CSharpAnalytics.PCL.Sessions
 {
     /// <summary>
     /// Represents a Visitor or user of the application.

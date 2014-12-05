@@ -4,7 +4,7 @@
 
 using System;
 
-namespace CSharpAnalytics
+namespace CSharpAnalytics.PCL
 {
     /// <summary>
     /// Allow a Page class to be decorated with an alternative name to be used by AutoMeasurement

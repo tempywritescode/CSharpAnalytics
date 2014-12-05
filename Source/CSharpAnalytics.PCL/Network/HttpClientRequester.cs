@@ -6,7 +6,7 @@ using System;
 using System.Net.Http;
 using System.Threading;
 
-namespace CSharpAnalytics.Network
+namespace CSharpAnalytics.PCL.Network
 {
     public class HttpClientRequester : IDisposable
     {

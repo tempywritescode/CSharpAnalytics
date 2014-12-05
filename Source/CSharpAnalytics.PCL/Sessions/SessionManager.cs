@@ -5,7 +5,7 @@
 using System;
 using System.Diagnostics;
 
-namespace CSharpAnalytics.Sessions
+namespace CSharpAnalytics.PCL.Sessions
 {
     public enum SessionStatus { Starting, Active, Ending };
     public enum VisitorStatus { Active, OptedOut, SampledOut };

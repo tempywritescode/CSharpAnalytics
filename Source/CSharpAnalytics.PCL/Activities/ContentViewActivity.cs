@@ -5,7 +5,7 @@
 using System;
 using System.Diagnostics;
 
-namespace CSharpAnalytics.Activities
+namespace CSharpAnalytics.PCL.Activities
 {
     /// <summary>
     /// Captures the details of a page view to be recorded in analytics.

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CSharpAnalytics.Network
+namespace CSharpAnalytics.PCL.Network
 {
     /// <summary>
     /// Responsible for requesting a queue of URIs in background.

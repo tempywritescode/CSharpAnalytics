@@ -5,7 +5,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace CSharpAnalytics.Sessions
+namespace CSharpAnalytics.PCL.Sessions
 {
     /// <summary>
     /// Memento to capture all SessionManager details for persisting between application runs.

@@ -4,7 +4,7 @@
 
 using System;
 
-namespace CSharpAnalytics.Debugging
+namespace CSharpAnalytics.PCL.Debugging
 {
     /// <summary>
     /// Defines the parameter name, human-readable label and decoder used to implement

@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 
-namespace CSharpAnalytics.Protocols
+namespace CSharpAnalytics.PCL.Protocols
 {
     /// <summary>
     /// Simple static class to provide a static constructor on KeyValuePair to allow type inference.
