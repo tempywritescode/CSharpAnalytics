@@ -18,6 +18,10 @@ namespace CSharpAnalytics.PCL.Network
             HttpClient = new HttpClient();
         }
 
+        public HttpClientRequester(string UserAgent) : this() {
+            HttpClient.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", UserAgent);
+        }
+
         public HttpClient HttpClient { get; private set; }
 
         /// <summary>

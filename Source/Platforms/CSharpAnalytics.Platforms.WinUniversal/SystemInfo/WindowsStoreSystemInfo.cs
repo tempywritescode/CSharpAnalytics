@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Windows.Devices.Enumeration.Pnp;
 
-namespace CSharpAnalytics.Platforms.WinUniversal.SystemInfo
+namespace CSharpAnalytics.Platforms.WinPhoneSL.Platforms.WinUniversal.SystemInfo
 {
     /// <summary>
     /// Obtain system information not conveniently exposed by WinRT APIs.

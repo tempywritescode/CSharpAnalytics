@@ -56,6 +56,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinUniversal", "WinUniversa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAnalytics.Platforms.WinUniversal", "Platforms\CSharpAnalytics.Platforms.WinUniversal\CSharpAnalytics.Platforms.WinUniversal.csproj", "{D7C648D0-B704-47AD-A073-555D3A3DDD7F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinPhoneSL", "WinPhoneSL", "{B2BF7B94-2E8A-4F9C-B157-AD8B33C2F52B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAnalytics.Platforms.WinPhoneSL", "Platforms\CSharpAnalytics.Platforms.WinPhoneSL\CSharpAnalytics.Platforms.WinPhoneSL.csproj", "{03810A66-8F9C-4187-AE78-FB04BB4B259D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -382,6 +386,24 @@ Global
 		{D7C648D0-B704-47AD-A073-555D3A3DDD7F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D7C648D0-B704-47AD-A073-555D3A3DDD7F}.Release|x64.ActiveCfg = Release|Any CPU
 		{D7C648D0-B704-47AD-A073-555D3A3DDD7F}.Release|x86.ActiveCfg = Release|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|ARM.Build.0 = Debug|ARM
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|x86.ActiveCfg = Debug|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Debug|x86.Build.0 = Debug|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|ARM.ActiveCfg = Release|ARM
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|ARM.Build.0 = Release|ARM
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|x64.ActiveCfg = Release|Any CPU
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|x86.ActiveCfg = Release|x86
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -404,5 +426,7 @@ Global
 		{CCCA94D6-F4B4-472E-9544-E2922027A8D0} = {D417860A-725F-4CCB-8E87-C0CF6C280436}
 		{9134E832-5601-4854-A0BA-FDB83C953E32} = {81E6DCC5-9722-4C41-9044-8BDCBB651D56}
 		{D7C648D0-B704-47AD-A073-555D3A3DDD7F} = {9134E832-5601-4854-A0BA-FDB83C953E32}
+		{B2BF7B94-2E8A-4F9C-B157-AD8B33C2F52B} = {81E6DCC5-9722-4C41-9044-8BDCBB651D56}
+		{03810A66-8F9C-4187-AE78-FB04BB4B259D} = {B2BF7B94-2E8A-4F9C-B157-AD8B33C2F52B}
 	EndGlobalSection
 EndGlobal
