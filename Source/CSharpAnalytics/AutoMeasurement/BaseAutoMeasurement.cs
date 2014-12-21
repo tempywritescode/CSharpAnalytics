@@ -23,8 +23,18 @@ namespace CSharpAnalytics
     /// </summary>
     public abstract class BaseAutoMeasurement
     {
-        private const string SessionStorageName = "CSharpAnalytics-MeasurementSession";
-        private const string QueueStorageName = "CSharpAnalytics-MeasurementQueue";
+        private string SessionStorageName = "CSharpAnalytics-MeasurementSession";
+        public string SessionFileName {
+            get { return SessionStorageName; }
+            set { SessionStorageName = value; }
+        }
+
+        private string QueueStorageName = "CSharpAnalytics-MeasurementQueue";
+        public string QueueFileName {
+            get { return QueueStorageName; }
+            set { QueueStorageName = value; }
+        }
+        
         private const string ApplicationLifecycleEvent = "ApplicationLifecycle";
         private const int MaximumRequestsToPersist = 60;
 
