@@ -49,7 +49,7 @@ namespace CSharpAnalytics.Protocols.Measurement
                 sessionManager.End();
 
             var trackingUri = uriBuilder.BuildUri(activity);
-            sender(trackingUri);
+            sender(trackingUri); 
         }
 
         /// <summary>

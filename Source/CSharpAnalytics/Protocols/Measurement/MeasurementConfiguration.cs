@@ -21,6 +21,11 @@ namespace CSharpAnalytics
 
         private double sampleRate = 100.0; // Track all visitors by default
 
+        private readonly bool sendStartSignal;
+        public bool SendStartSignal { get { return sendStartSignal; } }
+        private readonly bool outputDiagnostics;
+        public bool OutputDiagnostics { get { return outputDiagnostics; } }
+
         /// <summary>
         /// Google Analytics provided property id in the format UA-XXXX-Y.
         /// </summary>
@@ -75,7 +80,7 @@ namespace CSharpAnalytics
         /// <param name="accountId">Google Analytics provided property id in the format UA-XXXX-Y.</param>
         /// <param name="applicationName">Name of the application.</param>
         /// <param name="applicationVersion">Version of the application.</param>
-        public MeasurementConfiguration(string accountId, string applicationName, string applicationVersion)
+        public MeasurementConfiguration(string accountId, string applicationName, string applicationVersion, bool sendStartSignal, bool outputDiagnostics)
         {
             if (!accountIdMatch.IsMatch(accountId))
                 throw new ArgumentException("accountID must be in the format UA-XXXX-Y.");
@@ -83,6 +88,8 @@ namespace CSharpAnalytics
             this.accountId = accountId;
             this.applicationName = applicationName;
             this.applicationVersion = applicationVersion;
+            this.sendStartSignal = sendStartSignal;
+            this.outputDiagnostics = outputDiagnostics;
             AnonymizeIp = true;
         }
 
@@ -92,7 +99,7 @@ namespace CSharpAnalytics
         /// </summary>
         /// <param name="accountId">Google Analytics provided property id in the format UA-XXXX-Y.</param>
         public MeasurementConfiguration(string accountId)
-            : this(accountId, Windows.ApplicationModel.Package.Current.Id.Name, FormatVersion(Windows.ApplicationModel.Package.Current.Id.Version))
+            : this(accountId, Windows.ApplicationModel.Package.Current.Id.Name, FormatVersion(Windows.ApplicationModel.Package.Current.Id.Version), false, false)
         {
         }
 

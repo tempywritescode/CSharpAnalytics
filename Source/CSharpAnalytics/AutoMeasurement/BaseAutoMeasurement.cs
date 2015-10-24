@@ -13,6 +13,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CSharpAnalytics
 {
@@ -46,6 +47,7 @@ namespace CSharpAnalytics
         private BackgroundUriRequester backgroundRequester;
         private SessionManager sessionManager;
         private bool isStarted;
+        private bool shouldLogDiagnostics;
 
         protected const string ClientUserAgent = "CSharpAnalytics/0.3";
         protected Func<Uri, CancellationToken, bool> Requester;
@@ -73,6 +75,7 @@ namespace CSharpAnalytics
             if (!isStarted)
             {
                 isStarted = true;
+                shouldLogDiagnostics = configuration.OutputDiagnostics;
                 lastUploadInterval = uploadInterval ?? TimeSpan.FromSeconds(5);
                 await StartRequesterAsync();
 
@@ -88,7 +91,9 @@ namespace CSharpAnalytics
                 HookEvents();
             }
 
-            Client.TrackEvent("Start", ApplicationLifecycleEvent, launchKind);
+            if (configuration.SendStartSignal) {
+                Client.TrackEvent("Start", ApplicationLifecycleEvent, launchKind);
+            }
         }
 
         /// <summary>
@@ -200,6 +205,8 @@ namespace CSharpAnalytics
         /// <returns>Task that completes when the requester is ready.</returns>
         protected async Task StartRequesterAsync()
         {
+            maybeLog("Starting the requester");
+
             await SetupRequesterAsync();
             backgroundRequester = new BackgroundUriRequester(Request, IsInternetAvailable);
 
@@ -213,6 +220,8 @@ namespace CSharpAnalytics
         /// <returns>Task that completes when the requester has been suspended.</returns>
         protected async Task StopRequesterAsync()
         {
+            maybeLog("Suspending the requester");
+
             var safeBackgroundRequester = backgroundRequester;
             if (safeBackgroundRequester == null) return;
 
@@ -266,6 +275,8 @@ namespace CSharpAnalytics
             uri = client.AdjustUriBeforeRequest(uri);
             protocolDebugger.Dump(uri, DebugWriter);
 
+            maybeLog("Invoking requester: " + uri.AbsoluteUri);
+
             return Requester(uri, token);
         }
 
@@ -277,6 +288,11 @@ namespace CSharpAnalytics
             var safeRequester = backgroundRequester;
             if (safeRequester != null)
                 safeRequester.Add(uri);
+        }
+
+        protected void maybeLog(string toLog) {
+            if (shouldLogDiagnostics)
+                DebugWriter("GATracker - " + toLog);
         }
     }
 }
