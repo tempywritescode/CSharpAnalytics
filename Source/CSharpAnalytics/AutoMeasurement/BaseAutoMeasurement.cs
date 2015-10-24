@@ -273,7 +273,9 @@ namespace CSharpAnalytics
                 return true;
 
             uri = client.AdjustUriBeforeRequest(uri);
-            protocolDebugger.Dump(uri, DebugWriter);
+            if (shouldLogDiagnostics) {
+                protocolDebugger.Dump(uri, DebugWriter);
+            }
 
             maybeLog("Invoking requester: " + uri.AbsoluteUri);
 
@@ -291,8 +293,9 @@ namespace CSharpAnalytics
         }
 
         protected void maybeLog(string toLog) {
-            if (shouldLogDiagnostics)
+            if (shouldLogDiagnostics) {
                 DebugWriter("GATracker - " + toLog);
+            }
         }
     }
 }
