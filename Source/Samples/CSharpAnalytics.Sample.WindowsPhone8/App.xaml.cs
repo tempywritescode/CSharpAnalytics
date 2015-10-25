@@ -76,7 +76,7 @@ namespace CSharpAnalytics.Sample.WindowsPhone8
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             AutoMeasurement.DebugWriter = d => Debug.WriteLine(d);
-            AutoMeasurement.Start(new MeasurementConfiguration("UA-319000-8"), e);
+            AutoMeasurement.Start(new MeasurementConfiguration("UA-319000-8", false, false), e);
             AutoMeasurement.Attach(RootFrame);
         }
 

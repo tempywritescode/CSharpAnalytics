@@ -16,7 +16,7 @@ namespace CSharpAnalytics.Test.Protocols.Measurement
         [TestMethod]
         public void MeasurementUriBuilderTests_GetParameters_For_Configuration_Returns_Correct_Keys()
         {
-            var configuration = new MeasurementConfiguration("UA-1234-5", "AppName", "1.2.3.4");
+            var configuration = new MeasurementConfiguration("UA-1234-5", "AppName", "1.2.3.4", false, false);
 
             var keys = MeasurementUriBuilder.GetParameters(configuration).Select(k => k.Key).ToArray();
 
@@ -26,7 +26,7 @@ namespace CSharpAnalytics.Test.Protocols.Measurement
         [TestMethod]
         public void MeasurementUriBuilderTests_GetParameters_For_Configuration_Returns_No_Aip_Value_When_False()
         {
-            var configuration = new MeasurementConfiguration("UA-1234-5", "AppName", "1.2.3.4") { AnonymizeIp = false };
+            var configuration = new MeasurementConfiguration("UA-1234-5", "AppName", "1.2.3.4", false, false) { AnonymizeIp = false };
 
             var keys = MeasurementUriBuilder.GetParameters(configuration).Select(k => k.Key).ToArray();
 

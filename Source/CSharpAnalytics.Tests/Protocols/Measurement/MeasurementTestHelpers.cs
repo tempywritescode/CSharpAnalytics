@@ -7,7 +7,7 @@ namespace CSharpAnalytics.Test.Protocols.Measurement
 {
     internal static class MeasurementTestHelpers
     {
-        public static readonly MeasurementConfiguration Configuration = new MeasurementConfiguration("UA-319000-10", "AppName", "1.2.3.4");
+        public static readonly MeasurementConfiguration Configuration = new MeasurementConfiguration("UA-319000-10", "AppName", "1.2.3.4", false, false);
 
         public static SessionManager CreateSessionManager()
         {

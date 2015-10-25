@@ -122,7 +122,9 @@ namespace CSharpAnalytics
         public MeasurementConfiguration(string accountId)
             : this(accountId,
                     GetAttribute<System.Reflection.AssemblyTitleAttribute>(t => t.Title),
-                    GetAttribute<System.Reflection.AssemblyVersionAttribute>(v => v.Version))
+                    GetAttribute<System.Reflection.AssemblyVersionAttribute>(v => v.Version),
+                    false, 
+                    false)
         {
         }
 
@@ -144,8 +146,8 @@ namespace CSharpAnalytics
         /// Create a new cofiguration for analytics.
         /// </summary>
         /// <param name="accountId">Google Analytics provided property id in the format UA-XXXX-Y.</param>
-        public MeasurementConfiguration(string accountId)
-            : this(accountId, SystemInfo.WindowsPhoneSystemInfo.ApplicationName, SystemInfo.WindowsPhoneSystemInfo.ApplicationVersion)
+        public MeasurementConfiguration(string accountId, bool SendStartSignal, bool ShouldPrintDiagnostics)
+            : this(accountId, SystemInfo.WindowsPhoneSystemInfo.ApplicationName, SystemInfo.WindowsPhoneSystemInfo.ApplicationVersion, SendStartSignal, ShouldPrintDiagnostics)
         {
         }
 #endif
